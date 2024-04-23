@@ -10,7 +10,7 @@
 #calculator {
   width: 400px;
   padding: 15px;
-  background-color: #1F2937;
+  background-color: #1f2937;
   border-radius: 5px;
 }
 
@@ -20,8 +20,8 @@
   align-items: center;
   padding: 5px;
   height: 100px;
-  background-color: #E6E6E6;
-  border: 5px solid #D5D5D5;
+  background-color: #e6e6e6;
+  border: 5px solid #d5d5d5;
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 45px;
@@ -53,10 +53,37 @@
   }
 }
 
-#divide, #multiply, #subtract, #add, #equals {
-  background-color: #E2B260;
+#nine,
+#eight,
+#seven,
+#six,
+#five,
+#four,
+#three,
+#two,
+#one {
+  &:active {
+    background-color: #e0dede;
+  }
 }
 
-#clear, #plus-minus, #percent {
-  background-color: #0D766E;
+#divide,
+#multiply,
+#subtract,
+#add,
+#equals {
+  background-color: #e2b260;
+  &:active {
+    background-color: #fccb76;
+  }
+}
+
+#clear,
+#plus-minus,
+#percent {
+  background-color: #0d766e;
+
+  &:active {
+    background-color: #0d9b8f;
+  }
 }

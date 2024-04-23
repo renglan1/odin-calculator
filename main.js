@@ -48,8 +48,14 @@ function updateDisplay(number) {
   console.log(operating);
   if (operating === false) {
     if (display.innerHTML.length < 14) {
-      display.innerHTML = `${display.innerHTML}${number}`;
-      displayValue = Number(display.innerHTML.toString());
+      if(display.innerHTML !== '0') {
+        display.innerHTML = `${display.innerHTML}${number}`;
+        displayValue = Number(display.innerHTML.toString());
+      }
+      else {
+        display.innerHTML = `${number}`;
+        displayValue = number;
+      }
     }
   }
   else {
@@ -61,7 +67,7 @@ function updateDisplay(number) {
 
 function clearDisplay() {
   const display = document.querySelector('#display');
-  display.innerHTML = '';
+  display.innerHTML = '0';
   displayValue = 0;
   workingValue = 0;
   workingOperation = '';

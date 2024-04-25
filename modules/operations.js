@@ -23,7 +23,11 @@ function multiply(opOne, opTwo) {
 }
 
 function divide(numerator, denominator) {
-  return numerator / denominator;
+  if (denominator !== 0) {
+    return numerator / denominator;
+  }
+
+  return NaN;
 }
 
 export { operate };
